@@ -9,8 +9,8 @@ st.set_page_config(
 )
 
 if "data" not in st.session_state:
-    df_data = pd.read_csv("https://consultas.transparencia.mt.gov.br/dados_abertos/despesa/Despesa_2024.csv", encoding="cp1252", sep=';', nrows=3000)
-    # df_data = pd.read_csv("datasets/despesa_2024.csv", encoding="cp1252", encoding_errors='ignore', sep=';')
+    # df_data = pd.read_csv("https://consultas.transparencia.mt.gov.br/dados_abertos/despesa/Despesa_2024.csv", encoding="cp1252", sep=';', nrows=3000)
+    df_data = pd.read_csv("despesa_2024_clear.csv", encoding="cp1252", encoding_errors='ignore', sep=',')
     columns = ['NUANO', 'NMMES', 'NUBIMESTRE', 'DTEMISSAODESPESA', 'TPDESPESA', 'NMUNIDADEORCAMENTARIA', 
                'NMUNIDADEGESTORA', 'NMCREDOR', 'CPF_CNPJ', 'NMTIPOCREDOR', 'NMFUNCAO', 'NMSUBFUNCAO', 'NMPROGRAMA',
                'NMACAO', 'NMFONTERECURSO', 'NMCATEGORIA', 'NMGRUPONATUREZADESPESA', 'NMMODALIDADEAPLICACAO',
