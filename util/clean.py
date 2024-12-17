@@ -6,6 +6,6 @@ df_limpo = df.dropna()
 
 df_limpo = df.head(3000)
 
-df_limpo.to_csv('despesa_2024_clear.csv', index=False)
+df_limpo.to_csv('despesa_2024_clear.csv', encoding="cp1252", index=False)
 
 print("Arquivo reduzido salvo com sucesso!")
